@@ -8,7 +8,7 @@ containsOnlyNumbers([0.1,'str',2,1000,-9]); // returns false
 ```
 
 
-## My Solution:
+### My Solution:
 ```
 function containsOnlyNumbers(arr) {
   for (var i = 0 , length = arr.length ; i < length ; i++) {
