@@ -1,4 +1,4 @@
-# Training JS #2:
+# Training JS #3:
 
 Create a function that masks a string of numbers, such as a credit card number. All numbers except the last 4 should be replaced with the character #.
 
