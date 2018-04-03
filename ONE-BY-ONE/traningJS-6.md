@@ -2,7 +2,7 @@
 
 Fix all of the mistakes in the code below so that it works as expected without errors.
 
-```
+```js
 function Student(name, age, classes) {
   Student.name = name;
   Student.age = age;
@@ -24,7 +24,7 @@ sam.proto.updateAge(16);
 
 ### My Solution:
 
-```
+```js
 function Student(name, age, classes) {
   this.name = name;
   this.age = age;
