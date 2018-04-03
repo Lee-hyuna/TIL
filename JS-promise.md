@@ -1,4 +1,4 @@
-# Javascript - Promise
+# Javascript: Promise
 
 콜백이 그냥커피라면, 프로미스는 TOP
 자바스크립트에는 비동기로 이루어진 기능이 많다.
@@ -53,7 +53,7 @@ function promiseAjax (ajaxMethod) {
   })
 }
 ```
-실행 결과는 console.log로 'success'가 노출이 된 것을 볼 수 있다.
+실행 결과는 `console.log`로 `'success'`가 노출이 된 것을 볼 수 있다.
 해당 코드는 promise의 기초에 대해 가장 명확하게 이해할 수 있는 코드.
 
 ## 프로미스의 3가지 STATES
@@ -96,7 +96,7 @@ promiseAjax().then().catch(function(err) {
   console.log(err)
 });
 ```
-catch()는 .then(null, function() {})을 메서드 형태로 바꾼 것이라고 생각하면 됨.
+`catch()`는 `.then(null, function() {})`을 메서드 형태로 바꾼 것이라고 생각하면 됨.
 아래의 예제처럼 
 
 ```js
@@ -112,12 +112,12 @@ promiseAjax()
   console.log('그룹2')
 })
 ```
-첫번째 .then과 .catch는 그룹1로 한묶음인 셈이다! error > catch > 그룹2 순서로 실행이 된다!
+첫번째 `.then()`과 `.catch()`는 그룹1로 한묶음인 셈이다! error > catch > 그룹2 순서로 실행이 된다!
 
 
 ## Promise.all
-둘 이상의 프라미스를 조인하고, 지정된 모든 프라미스가 완료되거나 거부된 경우에만 반환됩니다.
-즉, 여러개의 비동기 작업들이 존재하고 이를 모두 완료했을 때, 작업을 진행하고 싶다면 promise.all
+둘 이상의 프라미스를 조인하고, 지정된 모든 프라미스가 완료되거나 거부된 경우에만 반환
+즉, 여러개의 비동기 작업들이 존재하고 이를 모두 완료했을 때, 작업을 진행하고 싶다면 `Promise.all`
 
 ```js
 var promiseAjax1 = new promise(function(resolve, reject) {
@@ -138,8 +138,9 @@ Promise.all([promiseAjax1, promiseAjax2].then(function(value) {
   console.log('All Success', value)
 }))
 ```
-Promise.all 은 배열 내 요소 중 어느 하나라도 거절(reject)하면 즉시 거절합니다. 
-즉 Promise.all 은 빠르게 실패합니다: 만약 timeout 이후 결정(resolve)하는 4개의 Promise를 가지고 있고, 그 중 하나가 거절(reject)하면 Promise.all 은 즉시 거절합니다.
+`Promise.all` 은 배열 내 요소 중 어느 하나라도 거절(reject)하면 즉시 거절당함 (단호박..,)
+
+즉, `Promise.all`은 빠르게 실패합니다: 만약 timeout 이후 결정(resolve)하는 여러개의 Promise를 가지고 있고, 그 중 하나가 거절(reject)하면 `Promise.all` 은 즉시 거절합니다.
 
 
 ## 참고
