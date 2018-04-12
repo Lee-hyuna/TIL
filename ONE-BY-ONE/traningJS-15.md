@@ -27,4 +27,20 @@ function flatten(arr) {
 ```
 
 ## Solution by Others:
-...
+```js
+function flatten(arr) {
+  return arr.reduce((prev, next) => prev.concat(next))
+}
+```
+
+```js
+function flatten(arr) {
+    var arrRet = [];
+
+    for( var i = 0; i < arr.length; i++ ) {
+        arrRet = arrRet.concat( arr[ i ] );
+    }
+
+    console.log( arrRet );
+}
+```

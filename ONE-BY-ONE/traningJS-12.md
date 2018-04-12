@@ -16,4 +16,43 @@ function removeDuplicates(arr) {
 ```
 
 ## Solution by Others:
-...
+```js
+function hasAlready( v, arr ) {
+    for( var i = 0, len = arr.length; i < len; i++ ) {
+        if( arr[ i ] === v ) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function removeDuplicates( arr ) {
+  var arrNew = [];
+  var originValue;
+
+  for( var i = 0, len = arr.length; i < len; i++ ) {
+    originValue = arr[ i ];
+
+    if( !hasAlready( originValue, arrNew ) ) {
+        arrNew.push( originValue );
+    }
+  }
+
+  console.log( arrNew );
+}
+```
+
+```js
+function removeDuplicates( arr ) {
+   var tempArr = [];
+   for(var i = 0; i < arr.length; i++ ) {
+       // 배열의 체크 indexOf
+       if(tempArr.indexOf( arr[i] ) === -1) {
+           tempArr.push( arr[i] );
+       }
+   }
+   console.log(tempArr);
+   return tempArr;
+}
+```

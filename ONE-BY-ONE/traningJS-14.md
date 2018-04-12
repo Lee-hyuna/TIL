@@ -24,4 +24,10 @@ function x () {
 ```
 
 ## Solution by Others:
-...
+```js
+function x () {
+  this.doThing = function() { return this }
+  this.doAnotherThing = function() { console.log('test..') }
+  return this
+}
+```
