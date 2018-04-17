@@ -17,46 +17,30 @@ longestWord('How is it that despite millenia of research, we still know nothing?
 
 ### My Solution:
 ```js
-// 진행중
 function longestWord(str) {
-      var regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi
-      var deleteSpecChar = str.replace(regExp, '')
-      var word = deleteSpecChar.split(' ')
-      var arr = []
-      for(var i = 0, len = word.length; i < len; i++) {
-        var obj = { 
-          word: word[i],
-          length: word[i].length
-        }
-        arr.push(obj)
-      }
-      
-      arr.sort(function(a,b) {
-        return b['length'] - a['length']
-      })
-      console.log(arr)
-      // for문을 돌면서 빈 배열을 만들고
-      // 0번째 인덱스는 무조건 집어넣고, 그 다음 인덱스랑 비교하고
-      // length가 같으면 배열에 집어넣고 아니면 버리고 리턴
-      // console.log(arr[0])
-      var result = [];
-      var temp = 0; // 제일 큰 length 담은 변수
-      
-      for(var x = 0, len = arr.length; x < len; x++) {
-        if(!temp) { 
-          temp = arr[x].word;
-          result.push(arr[x])
-          }
-        if(temp.length < arr[x].length) {
-          result = [];
-          result.push(arr[x]);
-          temp = arr[x]
-        }
-        if(temp !== arr[x].word && temp.length === arr[x].length) {
-          result.push(arr[x]);
-        }
-      }
+  var regEip = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi
+  var deleteSpecChar = str.replace(regEip, '')
+  var word = deleteSpecChar.split(' ')
+  var result = [];
+  var temp = 0;
+
+  for(var i = 0, len = word.length; i < len; i++) {
+    if(!temp) { 
+      temp = word[i];
+      result.push(word[i])
     }
+    if(temp.length < word[i].length) {
+      result = [];
+      result.push(word[i]);
+      temp = word[i]
+    }
+    if(temp !== word[i] && temp.length === word[i].length) {
+      result.push(word[i]);
+    }
+  }
+
+  return result
+}
 ```
 
 ## Solution by Others:
