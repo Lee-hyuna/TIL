@@ -28,4 +28,52 @@ function sameKeys(obj1, obj2) {
 ```
 
 ## Solution by Others:
-...
+```js
+function sameKeys(obj1, obj2) {
+  var keys1 = Object.keys(obj1);
+  var keys2 = Object.keys(obj2);
+  var totalResult = [];
+  var arr1 = keys1.length > keys2.length ? keys1 : keys2;
+  var arr2 = keys1.length > keys2.length ? keys2 : keys1;
+  var isResult = true;
+  
+  arr1.forEach(o1 => {
+    var isResult = false;
+    arr2.forEach(o2 => {
+      if(o1 === o2) {
+        isResult = true;
+      }
+    })
+    totalResult.push(isResult)
+  })
+  
+  totalResult.forEach(result => {
+    if(!result) { isResult = false; }
+  })
+  
+  return isResult;
+}
+```
+
+```js
+function sameKeys(obj1, obj2) {
+  var arrKey1 = Object.keys( obj1 );
+  var key1;
+
+  for(var i=0; i<arrKey1.length; ++i) {
+      key1 = arrKey1[ i ];
+
+      if( !obj2.hasOwnProperty( key1 ) ) {
+          return false;
+      }
+  }
+
+  var arrKey2 = Object.keys( obj2 );
+
+  if( arrKey1.length != arrKey2.length ) {
+      return false;
+  }
+
+  return true;
+}
+```
