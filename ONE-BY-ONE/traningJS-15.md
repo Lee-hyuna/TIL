@@ -1,6 +1,7 @@
 # Training JS #15:
 
 Create a function that flattens a two-dimensional array.
+
 Given this array:
 
 ```js

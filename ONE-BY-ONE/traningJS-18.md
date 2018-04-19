@@ -16,7 +16,14 @@ sameKeys(c, d); // returns false
 ### My Solution:
 ```js
 function sameKeys(obj1, obj2) {
+  for(var key in obj1) {
+    if(obj2.hasOwnProperty(key)) continue
+  }
   
+  for(key in obj2) {
+    if(obj1.hasOwnProperty(key) !== obj2.hasOwnProperty(key)) return false
+  }
+  return true
 }
 ```
 
