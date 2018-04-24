@@ -38,4 +38,22 @@ function longestWord(str) {
 ```
 
 ## Solution by Others:
-...
+```js
+function longestWord(str) {
+  var strWithoutSpecialChar = str.replace(/[^a-zA-Z ]/g, "");
+  var arrChar = strWithoutSpecialChar.split(" ");
+
+  var strLongest = "";
+  var strNow;
+
+  for(var i=0; i<arrChar.length; ++i) {
+      strNow = arrChar[ i ];
+
+      if( strLongest.length < strNow.length ) {
+          strLongest = strNow;
+      }
+  }
+
+  return strLongest;
+}
+```
