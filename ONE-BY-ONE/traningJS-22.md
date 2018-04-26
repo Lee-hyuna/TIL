@@ -23,4 +23,61 @@ function isValidEmail(str) {
 ```
 
 ## Solution by Others:
-...
+```js
+const AT = "@";
+const DOT = ".";
+
+function getIsLetter( str ) {
+    // return str.match(/[a-z]/i);
+    return str.search(/[a-z]/i) != -1;
+}
+
+function isValidEmail(str) {
+  const LENGTH = str.length;
+
+  let hasAT = false;
+  let hasDot = false;
+
+  let char;
+  let isLetter;
+  
+  for(var i=0; i<LENGTH; ++i) {
+      char = str.charAt( i );
+      isLetter = getIsLetter( char );
+
+      // 처음이랑 마지막이 문자가 아니면 false.
+      if( ( i === 0 && !isLetter ) || ( i === LENGTH - 1 && !isLetter ) ) {
+          return false;
+      }
+      
+      if( !hasAT ) {
+          if( char === AT ) {
+              // @ 다음은 문자가 와야 됨.
+              if( i === LENGTH - 1 || !getIsLetter( str.charAt( i + 1 ) ) ) {
+                  return false;
+              }
+
+              hasAT = true;
+          }
+      } else if( !hasDot ) {
+          if( char === DOT ) {
+              // . 다음은 문자가 와야 됨.
+              if( i === LENGTH - 1 || !getIsLetter( str.charAt( i + 1 ) ) ) {
+                  return false;
+              }
+
+              hasDot = true;
+          }
+      } else if( !isLetter ) {
+          // @, . 둘 다 있는데 문자가 아니면 false.
+          return false;
+      }
+  }
+
+  if( !hasAT || !hasDot ) {
+      return false;
+  }
+
+  return true;
+}
+```

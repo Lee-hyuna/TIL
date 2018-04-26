@@ -39,4 +39,5 @@ for(var i = 0, len = el.length; i < len; i++) {
 ```
 
 ## Solution by Others:
-...
+```js
+```

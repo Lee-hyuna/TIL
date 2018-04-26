@@ -64,4 +64,37 @@ function filter(arr, callback) {
 ```
 
 ## Solution by Others:
-...
+```js
+function forEach(arr, callback) {
+  if(!arr || !arr.length || !callback || typeof callback !== 'function') {
+    return;
+  }
+  for(var i = 0; i < arr.length; i++) {   
+    callback(arr[i], i)
+  }
+}
+
+function map(arr, callback) {
+  if(!arr || !arr.length || !callback || typeof callback !== 'function') {
+    return;
+  }
+  var result = [];
+  for(var i = 0; i < arr.length; i++) {   
+    result.push(callback(arr[i], i))
+  }
+  return result;
+}
+
+function filter(arr, callback) {
+  if(!arr || !arr.length || !callback || typeof callback !== 'function') {
+    return;
+  }
+  var result = [];
+  for(var i = 0; i < arr.length; i++) {
+    if(callback(arr[i], i)) {
+      result.push(arr[i])
+    }
+  }
+  return result
+}
+```
