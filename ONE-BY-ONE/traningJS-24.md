@@ -28,14 +28,6 @@ $('#app').on('click', '.red', function () {
 
 ### My Solution:
 ```js
-var el = document.querySelectorAll('p');
-function modifyText() {
-  this.innerHTML = this.className === 'red' ? 'Clicked an element with a class of red.' : 'Clicked a p element.'
-}
-
-for(var i = 0, len = el.length; i < len; i++) {
-  el[i].addEventListener('click', modifyText.bind(el[i]));
-}
 ```
 
 ## Solution by Others:
