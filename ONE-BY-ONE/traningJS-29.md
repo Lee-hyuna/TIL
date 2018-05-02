@@ -14,6 +14,3 @@ for(var i = 0; i < btn.length; i++) {
   btnEvt(i)
 }
 ```
-
-## Solution by Others:
-...
