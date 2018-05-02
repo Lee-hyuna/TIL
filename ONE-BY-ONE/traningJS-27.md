@@ -26,16 +26,9 @@ compose(double, cube, addOne)(1); // returns 16, equivalent to double(cube(addOn
 
 ### My Solution:
 ```js
-function compose(/* fns */) {
-  
-}
-```
-
-## Solution by Others:
-```js
-function compose(cb1, cb2, cb3) {
-  return function(n) {
-    cb1(cb2(cb3(n)));
+function compose(a, b, c) {
+  return function(val) {
+    a(b(c(val)));
   }
 }
 ```
