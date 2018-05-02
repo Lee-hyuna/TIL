@@ -33,7 +33,42 @@ isValidColor('rgb(0,,0)'); // false
 ### My Solution:
 ```js
 function isValidColor(color) {
+  var result = true;
+  var rgba = color.split('(')[0];
+  var nSplitFir = color.split('(')[1];
+  var nSplitLast = nSplitFir.split(')')[0];
+  var num = nSplitLast.split(',');
+  var persent = color.indexOf('%');
+  var isSpace = color.split(' (').length > 1;
+  var isMinus = color.split('-').length > 1;
   
+
+
+  if(persent > -1) {
+    if(num[0].split('%')[0] > 100) {
+      return false
+    }
+    
+    num.filter(data => {
+      if(data.indexOf('%') === -1) {
+        return false
+      } 
+    })
+  }
+
+  if(rgba !== 'rgba' && rgba !== 'rgb') {
+    return false
+  }
+  
+  if(rgba.length !== num.length) {
+    return false
+  }
+
+  if(isSpace || isMinus) {
+    return false
+  }
+
+  return result
 }
 ```
 
