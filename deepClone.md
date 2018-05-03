@@ -69,3 +69,9 @@ console.log(obj.a); // 1
 if문으로 object검사를 거치고, for문을 이용해 obj안의 key값을 탐색한다. 
 
 이후 if문으로 `obj.hasOwnProperty(key)`를 다시 탐색해 주는 이유는 prototype에 있는 상속된 객체의 속성도 반복되기 때문에 자기 속성만 반복되도록 제한을 해둔 것임.
+
+
+### 참조
+[블로그](https://hyunseob.github.io/2016/02/08/copy-object-in-javascript/)
+[stackoverflow](https://stackoverflow.com/questions/4459928/how-to-deep-clone-in-javascript?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
+그리고, 책 => { 자바스크립트 핵심가이드 }
