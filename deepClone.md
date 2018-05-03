@@ -70,6 +70,10 @@ if문으로 object검사를 거치고, for문을 이용해 obj안의 key값을 �
 
 이후 if문으로 `obj.hasOwnProperty(key)`를 다시 탐색해 주는 이유는 prototype에 있는 상속된 객체의 속성도 반복되기 때문에 자기 속성만 반복되도록 제한을 해둔 것임.
 
++ 추가 : 
+**newObject = JSON.parse(JSON.stringify(oldObject))** 로도 구현 가능하다고 함!
+하지만 stringify로 카피하면 함수는 카피가 안되니 주의.
+
 
 
 ---------------------
