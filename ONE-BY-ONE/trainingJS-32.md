@@ -1,4 +1,4 @@
-# Training JS #33 : typeof
+# Training JS #32 : typeof
 `typeof bar === 'object`를 사용했을 때 함정이 무엇인가요?
 
 ### Answer:
