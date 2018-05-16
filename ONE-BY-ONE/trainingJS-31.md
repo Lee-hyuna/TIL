@@ -1,22 +1,22 @@
-# Training JS #31: Object debugging
-While making a zork-type game, you create an object of rooms. Unfortunately, the game is not working. Find all of the errors in the rooms object to get your game working again.
+# Training JS #31: 
+
+## Write a simple function (less than 160 characters) that returns a boolean indicating whether or not a string is a palindrome.
 
 
 ### My Solution:
+The following one line function will return true if str is a palindrome; otherwise, it returns false.
+
 ```js
-var rooms = {
-  first: {
-    description: 'This is the first room'
-    items: {
-      chair: 'The old chair looks comfortable',
-      lamp: 'This lamp looks ancient'
-  },
-  second: {
-    description: 'This is the second room'
-    items: {
-      couch: 'This couch looks like it would hurt your back,
-      table: 'On the table there is an unopened bottle of water'
-    }
-  }
+function isPalindrome(str) {
+  str = str.replace(/\W/g, '').toLowerCase();
+  return (str == str.split('').reverse().join(''));
 }
+```
+
+> For example:
+
+```js
+console.log(isPalindrome("level"));                   // logs 'true'
+console.log(isPalindrome("levels"));                  // logs 'false'
+console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
 ```
