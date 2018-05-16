@@ -24,5 +24,3 @@ function alpha_string46(s){
   return result;
 }
 ```
-
-## Solution by Others:
