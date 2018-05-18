@@ -6,7 +6,7 @@ s 의 길이가 4 혹은 6 이고, 숫자로만 구성되있는지 확인해주�
 
 예를들어 s 가 a234 이면 False 를 리턴하고 1234 라면 True 를 리턴하면 됩니다
 
-### My Solution:
+## My Solution:
 
 ```js
 function alpha_string46(s) {
@@ -20,6 +20,32 @@ function alpha_string46(s) {
       result = true;
     }
   }
+  return result;
+}
+```
+
+## Solution by Others:
+```js
+function alpha_string46(s){
+  var regex = /^\d{6}$|^\d{4}$/;
+  return regex.test(s);
+}
+```
+
+```js
+function alpha_string46(s) {
+   return s.length == 4 || s.length == 6 ? !isNaN(s) : false 
+}
+```
+
+
+```js
+function alpha_string46(s){
+  var result = false;
+  if((s.length == 4 || s.length == 6) && /^[0-9]+$/.test(s)) {
+    result = true;
+  }
+
   return result;
 }
 ```
