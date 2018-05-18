@@ -18,7 +18,7 @@ function foo2()
 ```
 
 
-# An
+### Answer:
 
 Surprisingly, these two functions will not return the same thing. Rather:
 
