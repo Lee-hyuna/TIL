@@ -13,6 +13,28 @@ try hello world는 세 단어 try, hello, world로 구성되어 있습니다. �
 
 ## My Solution:
 ```js
+function solution(s) {
+    var result = [];
+    var arr = s.split(' ');
+    
+    for(var i = 0, len = arr.length; i < len; i++) {
+        var strArr = arr[i].split('');
+    // console.log(strArr)
+        var newArr = [];
+        for(var num = 0, res = strArr.legnth; num < res; num++){
+            console.log(strArr[num])
+            if(num % 2) {
+                newArr.push(strArr[num])
+            }else {
+                newArr.push(strArr[num]).toUpperCase()
+            }
+        }
+        
+        result.push(newArr.join(''));
+    }
+    
+  return result.join(' ');
+}
 
 ```
 
