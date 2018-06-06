@@ -16,6 +16,7 @@ LIFO (Last in First Out)
 **Stack**
 
 가장 늦게들어온 것이 가장먼저 나간다는 뜻
+
 ![](./images/image01.png)
 
 ```js
