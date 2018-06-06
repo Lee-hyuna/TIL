@@ -70,17 +70,12 @@ third();
 
 ```js
 function Stack() {
-  //스택의 요소가 저장되는 배열
-  this.dataStore = [];
-
-  //스택의 위치
-  this.top = -1;
-
-  //함수정의
-  this.push = push;
-  this.pop = pop;
-  this.peek = peek;
-  this.clear = clear;
+  this.dataStore = []; // 요소 저장공간
+  this.top = -1; //스택의 위치
+  this.push = push; // 스택에 요소를 추가
+  this.pop = pop; // 스택에 요소를 제거
+  this.peek = peek; // 최상의 요소 출력
+  this.clear = clear; // 모든 요소 제거
   this.length = length;
 }
 
@@ -120,50 +115,46 @@ function length() {
   return this.top + 1;
 }
 
-//스택 클래스 구현 테스트
-
-//스택 객체 생성
 var stackObj = new Stack();
 
-//스택에 데이터 삽입
 stackObj.push("David");
 stackObj.push("Raymond");
 stackObj.push("Bryan");
 
 //스택의 크기 반환
-console.log("length: " + stackObj.length());
+console.log("length: " + stackObj.length()); // 3
 
 //스택 최상위 요소 출력
-console.log(stackObj.peek());
+console.log(stackObj.peek()); // Bryan
 
 //스택에서 최상위 요소 꺼내기
 var popped = stackObj.pop();
-console.log("The popped element is: " + popped);
+console.log("The popped element is: " + popped); // Bryan
 
 //스택의 최상위 요소 출력
-console.log(stackObj.peek());
+console.log(stackObj.peek()); // Raymond
 
 //스택에 데이터 삽입
 stackObj.push("Cynthia");
 
 //스택의 최상위 요소 출력
-console.log(stackObj.peek());
+console.log(stackObj.peek()); // Cynthia
 
 //스택 비우기
 stackObj.clear();
 
 //스택의 크기 반환
-console.log("length: " + stackObj.length());
+console.log("length: " + stackObj.length()); // 0
 
 //스택의 최상위 요소를 출력.
 //이때 스택은 모두 비워졌으므로 undefined가 출력된다.
-console.log(stackObj.peek());
+console.log(stackObj.peek()); // undefined
 
 //스택에 데이터 삽입
 stackObj.push("Clayton");
 
 //스택의 최상위 요소 출력
-console.log(stackObj.peek());
+console.log(stackObj.peek()); // Clayton
 ```
 
 ---
@@ -247,8 +238,6 @@ function empty() {
   }
 }
 
-//테스트 프로그램
-
 var queueObject = new Queue();
 
 //Queue에 요소 삽입
@@ -258,15 +247,14 @@ queueObject.enqueue("Jennifer");
 
 //First In First Out - 먼저들어간게 먼저나오는 구조로 인하여
 //Meredith가 먼저 나온다.
-console.log("Dequeued elemet: " + queueObject.dequeue());
+console.log("Dequeued elemet: " + queueObject.dequeue()); // Meredith
 
 //Queue의 모든 요소 출력
-console.log("Element of Queue");
-console.log(queueObject.toString());
+console.log(queueObject.toString()); // Cynthia, Jennifer
 
 //큐의 맨 앞의 요소 출력
-console.log("Front of queue : " + queueObject.front());
+console.log("Front of queue : " + queueObject.front()); // Cynthia
 
 //큐의 맨 뒤 요소 출력
-console.log("Back of queue : " + queueObject.back());
+console.log("Back of queue : " + queueObject.back()); // Jennifer
 ```
