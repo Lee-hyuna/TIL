@@ -6,12 +6,18 @@ Data의 집합. 정의된 규칙으로 인해 나열되고 자료에 대한 처�
 
 자료를 효율적으로 저장하고, 관리하기 때문에 잘 선택된 자료구조는 실행시간을 단축시켜주거나 메모리 용량의 절약이 가능
 
+---------------
 
 ## 스택
 자료의 입력과 출력을 한 곳으로 제한한 자료구조
-LIFO (Last in First Out) 구조, push() pop()
+
+LIFO (Last in First Out)
 
 **Stack**
+
+가장 늦게들어온 것이 가장먼저 나간다는 뜻
+![](./images/image01.png)
+
 ```js
 var third = function(){
   console.log('third');
@@ -26,48 +32,18 @@ var first = function(){
 }
 first();
 third();
-// third > second > first > third 순으로 console이 찍히게 된다.
 ```
-![](./images/image01.png)
+> log의 결과값이 third > second > first > third 순으로 찍히게 된다.
+
+---------------
 
 **Linked List Stack**
 
 위의 구현한 스택은 문제점이 존재한다. 배열처럼 스택의 용량을 정해두고 데이터를 쌓아야만 함.
+
 스택의 용량을 초과할 경우 위에 있는 데이터를 빼내야만 다른 데이터를 넣을 수 있음.
 
 ![](./images/image02.gif)
-
-```js
-var Stack = (function(){
-  var Stack = function(){
-    this.dataStore = []; // 데이터들을 넣어줄 공간
-    this.top = 0; // 초기에는 쌓인 값이 없으니 0으로 초기화해줍니다.
-  };
-  Stack.prototype.push = function(data){
-    this.dataStore[this.top++] = data;
-  };
-  Stack.prototype.pop = function(){
-    return this.dataStore[--this.top];
-  };
-  Stack.prototype.length = function(){
-    return this.top; // top 반환
-  };
-  Stack.prototype.clear = function(){
-    this.top = 0;
-  };
-  // 다 만들었으니 동작이 잘하는지 살펴봐야겠죠?
-  var stack = new Stack();
-  stack.push(1);
-  stack.push(2);
-  stack.push(3);  
-  console.log('요소제거', stack.pop()); // 3
-  console.log('length', stack.length()); // 2 
-  stack.clear();
-  console.log('length', stack.length()); // 0
-  return Stack;
-})();
-```
-
 
 **장점**
 - 크기에 제한을 가지고 있지 않다.
@@ -82,15 +58,43 @@ var Stack = (function(){
 - 이중 연결 리스트가 방안이 될 수 있다.
 
 
+```js
+var Stack = function(){
+  this.dataStore = []; // 데이터들을 넣어줄 공간
+  this.top = 0; // 초기에는 쌓인 값이 없으니 0으로 초기화해줍니다.
+};
+Stack.prototype.push = function(data){
+  this.dataStore[this.top++] = data;
+};
+Stack.prototype.pop = function(){
+  return this.dataStore[--this.top];
+};
+Stack.prototype.length = function(){
+  return this.top; // top 반환
+};
+Stack.prototype.clear = function(){
+  this.top = 0;
+};
+
+var stack = new Stack();
+stack.push(1);
+stack.push(2);
+stack.push(3);  
+console.log('요소제거', stack.pop()); // 3
+console.log('length', stack.length()); // 2 
+stack.clear();
+console.log('length', stack.length()); // 0
+```
+
+---------------
 
 ## 큐
 자료의 입력과 출력을 한 쪽 끝으로 제한한 자료구조
-FIFO (First in First Out) 구조, put() get()
 
-tree의 깊이 우선탐색, sliding window 등 주로 순서 처리의 시스템에 쓰인다.
+FIFO (First in First Out)
 
-처리될 메세지들의 리스트.
-스택이 비어있으면 큐에서 하나의 메세지가 꺼내지고 처리가 됨. 
+주로 tree의 깊이 우선탐색, sliding window 등 주로 순서 처리의 시스템에 쓰인다.
+
 
 ![](./images/image03.png)
 
@@ -100,70 +104,119 @@ tree의 깊이 우선탐색, sliding window 등 주로 순서 처리의 시스�
 
 > 개선된 원형 큐가 나옴
 
+![](./images/image05.png)
+
 **원형 큐의 단점**
 - 메모리 공간은 잘 활용하나 배열로 구현되어 있기 때문에 큐의 크기가 제한이 되는 단점이 존재
 
 > 링크드 리스트로 큐가 나옴
 
+
+
 링크드 리스트로 구현한 큐는 큐의 제한이 없고 삽입, 삭제가 편리하다
 
 
+
+
 ```js
- var queue = function(){
-  this.datas = [];
- }
+//Queue의 생성자 정의
+// dataStore(property) = 요소 저장공간
+// enqueue(func) = 요소추가
+// dequeue(func) = 요소꺼내기
+// font(func) = 큐의 맨앞에 있는 요소 확인 꺼내지는 않습니다.
+// back(func) = 큐의 맨뒤에 있는 요소 확인 꺼내지는 않습니다.
+// length(func) = 큐의 요소 갯수
+// empty(func) = 큐가 비었는지 안비었는지 알려줍니다.
+// toString() = 모든 요소 출력
 
- queue.prototype.isEmpty = function(){
-   return this.datas.length==0?true:false;
- }
- queue.prototype.length = function(){
-  return this.datas.length;
- }
- queue.prototype.enqueue = function(element){
-  this.datas.push(element);
-  // console.log("-------------------------------------------------------------");
-  // console.log("enqueue ",element);
-  // console.log("-------------------------------------------------------------");
-  this.print();
+function Queue(){
+    this.dataStore = [];
+    this.enqueue = enqueue;
+    this.dequeue = dequeue;
+    this.front = front;
+    this.back = back;
+    this.toString = toString;
+    this.empty = empty;
+}
 
- }
- queue.prototype.dequeue = function(){
-  element = this.peek();
-  this.datas.shift();
-  // console.log("-------------------------------------------------------------");
-  // console.log("dequeue, return ",element);
-  // console.log("-------------------------------------------------------------");
-  // this.print();
-  return element;
- }
- queue.prototype.peek = function(){
-  element = this.datas[0]==undefined?null:this.datas[0];
-  return element;
- }
- queue.prototype.toArray = function(){
-  return this.datas;
- }
- queue.prototype.print = function(){
-  console.log(this.datas);
- }
+function enqueue(element){
+    //여기서 push함수는 Array의 내장함수이다.
+    //요소를 배열 맨 뒤에 삽입.
+    this.dataStore.push(element);
+}
 
- queue.prototype.delAll = function(){
-  this.dats = [];
- }
+function dequeue(){
+    //shift는 Array의 내장함수이다. 
+    //배열내의 맨 앞 요소를 반환하고 배열내에서 삭제한다.
+    return this.dataStore.shift();
+}
 
- // Q = new queue();
+//큐의 맨 젓번째 요소 반환
+function front(){
 
- // Q.enqueue(5);
- // Q.enqueue(3);
- // Q.dequeue();
- // Q.enqueue(8);
- // Q.enqueue(7);
- // Q.dequeue();
- // Q.enqueue(9);
- // Q.enqueue(10);
- // Q.dequeue();
+    //배열의 첫번째 요소 반환
+    return this.dataStore[0];
+}
 
- module.exports = queue;
+
+//큐의 맨 끝 요소 반환
+function back(){
+
+    //배열의 맨 끝 요소 반환
+    return this.dataStore[this.dataStore.length-1];
+}
+
+
+//큐에 저장된 요소 모두 출력
+function toString(){
+    var retStr="";
+    for(var i=0; i<this.dataStore.length; i++)
+    {
+        retStr=retStr + this.dataStore[i] + "\n";
+    }
+    return retStr;
+}
+
+//큐 비우기
+function empty(){
+    if(this.dataStore.length==0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+//테스트 프로그램
+
+var queueObject = new Queue();
+
+//Queue에 요소 삽입
+queueObject.enqueue("Meredith");
+queueObject.enqueue("Cynthia");
+queueObject.enqueue("Jennifer");
+
+
+//First In First Out - 먼저들어간게 먼저나오는 구조로 인하여
+//Meredith가 먼저 나온다.
+console.log("Dequeued elemet: "+queueObject.dequeue());
+
+//Queue의 모든 요소 출력
+console.log("Element of Queue");
+console.log(queueObject.toString());
+
+//큐의 맨 앞의 요소 출력
+console.log("Front of queue : " + queueObject.front());
+
+//큐의 맨 뒤 요소 출력
+console.log("Back of queue : " + queueObject.back());
 ```
-
-
