@@ -2,7 +2,7 @@
 
 ## 자료구조
 
-Data 의 집합. 정의된 규칙으로 인해 나열되고 자료에 대한 처리를 효율적으로 수행할 수 있도록자료를 구분하여 표현한 것.
+Data 의 집합. 정의된 규칙으로 인해 나열되고 자료에 대한 처리를 효율적으로 수행할 수 있도록 자료를 구분하여 표현한 것.
 
 자료를 효율적으로 저장하고, 관리하기 때문에 잘 선택된 자료구조는 실행시간을 단축시켜주거나 메모리 용량의 절약이 가능
 
@@ -16,7 +16,7 @@ LIFO (Last in First Out)
 
 **Stack**
 
-가장 늦게들어온 것이 가장먼저 나간다는 뜻
+스택은 가장 윗부분에서만 자료를 추가와 삭제가 일어나므로 실행속도가 빠르고 구현이 쉬운 효율적인 자료구조
 
 ![](./images/image01.png)
 
@@ -40,8 +40,6 @@ third();
 
 ---
 
-**Linked List Stack**
-
 스택을 사용해야할 때 주의해야할 점은 **UnderFlow**와 **OverFlow**.
 
 **UnderFlow:** top 이 이미 초기값을 가르키고 있어 스택에 아무것도 없는상태에서 pop() 연산을 시도할때 발생.
@@ -52,21 +50,6 @@ third();
 
 스택의 용량을 초과할 경우 위에 있는 데이터를 빼내야만 다른 데이터를 넣을 수 있음.
 
-![](./images/image02.gif)
-
-**장점**
-
-* 크기에 제한을 가지고 있지 않다.
-* 중간 삽입, 삭제가 array 에 비하여 쉽다.
-* 삽입, 삭제에 대한 비용이 적다. O(1)
-* 때문에 c,c++ 등에서 자료구조를 구현할때 linked list 를 주로 활용한다.
-
-**단점**
-
-* 탐색에 있어서 단방향이다.
-* 탐색에 대하여 비용이 크다. O(n)
-* 때문에 삽입,삭제 에 있어서 이전 노드의 주소(객체)의 정보를 가지고 있어야 한다.
-* 이중 연결 리스트가 방안이 될 수 있다.
 
 ```js
 function Stack() {
@@ -76,7 +59,7 @@ function Stack() {
   this.pop = pop; // 스택에 요소를 제거
   this.peek = peek; // 최상의 요소 출력
   this.clear = clear; // 모든 요소 제거
-  this.length = length;
+  this.length = length; // 스택의 길이를 반환
 }
 
 //스택에 요소를 추가
@@ -157,6 +140,32 @@ stackObj.push("Clayton");
 console.log(stackObj.peek()); // Clayton
 ```
 
+### 재귀
+```js
+// 일반적인 팩토리얼 구현 함수
+function factorial(n) {
+  if( n < 2 ) {
+      return 1;
+  }else {
+      return n * factorial(n-1);
+  }
+}
+
+// 스택을 이용한 팩토리얼 구현 함수
+function fact(n) {
+  var stack = new Stack();
+  while ( n > 1 ) {
+      stack.push(n--);
+  }
+
+  var result = 1;
+  while( stack.length() > 0 ) {
+      result *= stack.pop();
+  }
+  return result;
+}
+```
+
 ---
 
 ## 큐
@@ -165,25 +174,11 @@ console.log(stackObj.peek()); // Clayton
 
 FIFO (First in First Out)
 
-주로 tree 의 깊이 우선탐색, sliding window 등 주로 순서 처리의 시스템에 쓰인다.
+주로 tree 의 깊이 우선탐색, 프린트 스풀러, 은행 고객이나 식료품상점의 대기줄 등 주로 순서 처리의 시스템에 쓰인다.
+
 
 ![](./images/image03.png)
 
-**단점**
-
-* 큐에 빈 메모리가 남아 있어도 꽉 차있는 것으로 판단할 수 있음. rear 가 배열의 끝에 도달했을 경우
-
-> 개선된 원형 큐가 나옴
-
-![](./images/image05.png)
-
-**원형 큐의 단점**
-
-* 메모리 공간은 잘 활용하나 배열로 구현되어 있기 때문에 큐의 크기가 제한이 되는 단점이 존재
-
-> 링크드 리스트로 큐가 나옴
-
-링크드 리스트로 구현한 큐는 큐의 제한이 없고 삽입, 삭제가 편리하다
 
 ```js
 function Queue() {
@@ -258,3 +253,42 @@ console.log("Front of queue : " + queueObject.front()); // Cynthia
 //큐의 맨 뒤 요소 출력
 console.log("Back of queue : " + queueObject.back()); // Jennifer
 ```
+
+### 우선순위 큐
+```js
+function Patient(name, code) {
+  this.name = name;
+  this.code = code; // 우선순위 요소를 나타내는 정수
+}
+
+function dequeue() {
+  // 가장 낮은 우선순위 코드를 가진 요소가 가장 높은 우선순위를 갖는다.
+  // 배열을 둘러보면서 가장 낮은 우선순위 코드를 찾고 splice를 이용해 우선순위가 가장 높은 요소를 삭제한다.
+  var entry = 0;
+  for (var i = 0; i < this.dataStore.length; ++i) {
+    if (this.dataStore[i].code < this.dataStore[entry].code) {
+      entry = i;
+    }
+  }
+  // 단순 순차검색 방법으로 우선순위가 가장 높은 코드 (가장 낮은 code. 1이 5보다 높은 우선순위를 갖는다)를 찾음
+  return this.dataStore.splice(entry, 1);
+}
+
+// 위에서 수정한 dequeue를 제대로 출력하는 함수
+function toString() {
+  var retStr = '';
+  for(var i = 0; i < this.dataStore.length; ++i) {
+    retStr += this.dataStore[i].name + ' code: '
+           + this.dataStore[i].code + '\n';
+  }
+  return retStr
+}
+
+
+```
+
+
+## 자료 참고
+- [자바스크립트 자로구조와 알고리즘](http://book.naver.com/bookdb/book_detail.nhn?bid=8095174)
+- [[자료구조 강좌 - 큐] -   블로그](http://blog.eairship.kr/213)
+- [[data structure javascript] Stack - 블로그](http://mythinkg.blogspot.com/2015/04/data-structure-javascript-stack.html)
