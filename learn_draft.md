@@ -22,7 +22,7 @@
 - VPN (디아)
 - VDI (디아)
 
-# TECH - BASIC
+# TECH
 ## 웹
 - 이미지 파일 타입들의 특징 (멀린)
 - 파일 상대경로와 절대경로 (디아)
@@ -39,7 +39,6 @@
   
 - CSS
   - SASS
-  - SVG
   - 반응형 웹
 
 ## Javascript (문서정리는 추후에 하도록)
@@ -60,13 +59,12 @@
   - bind, apply, call
   - 호이스팅
 
-  **교육자료 외 추가자료**
-  - 비동기와 Callback
-    - Promises
+  **Advance**
   - sessionStorage & localStorage
-  - Javascript Pattern
-  - es6
-  - OOP & FP
+  - Design Pattern (스칼렛)
+  - Algorithm (디아)
+  - es6 
+  - OOP & FP 
   - NPM
   - Webpack
     - Transpiling(babel)
@@ -86,6 +84,8 @@
   - vuex
 
 ## AJAX & JSON (스칼렛)
+- 비동기와 Callback
+  - Promises
 
 # 과제
 > 간단한 것 부터 어려운 것 까지 심화로
