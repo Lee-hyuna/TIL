@@ -145,8 +145,8 @@ error!
 ```javascript
 var global = {
   names: {
-    'jinsoo': 'hi',
-    'gwangwhi': 'hoo'
+    'hyuna': 'hi',
+    'minji': 'ho'
   },
   jobs: {
     'programmer': 'good',
@@ -154,14 +154,14 @@ var global = {
   }
 };
 
-console.log(global.names.jinsoo);
-console.log(global.names.gwangwhi);
+console.log(global.names.hyuna);
+console.log(global.names.minji);
 console.log(global.jobs.programmer);
 console.log(global.jobs.modeling);
 
 /* 결과
 hi
-hoo
+ho
 good
 job
 */
@@ -183,8 +183,8 @@ job
   };
 })();
 
-console.log(global.names.jinsoo);
-console.log(global.names.gwangwhi);
+console.log(global.names.hyuna);
+console.log(global.names.minji);
 console.log(global.jobs.programmer);
 console.log(global.jobs.modeling);
 
