@@ -43,7 +43,3 @@ var sam = new Student('Sam', 15, ['English', 'Math', 'History', 'Science']);
 sam.addClassed('Art');
 sam.updateAge(16);
 ```
-
-## Solution by Others:
-
-...
