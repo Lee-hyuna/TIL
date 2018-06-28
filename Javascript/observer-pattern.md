@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+# Observer pattern example
 
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-
-<body>
-  <canvas id="panel" width="380" height="380"></canvas>
-  <button type="button" id="btnIncrease">생성</button>
-  <button type="button" id="btnDelete">제거</button>
-  <span id="target"></span>
-</body>
-<script>
-  var ctx = document.getElementById("panel").getContext("2d");
+```js
+var ctx = document.getElementById("panel").getContext("2d");
   var btnIncrease = document.querySelector('#btnIncrease');
   var btnDelete = document.querySelector('#btnDelete');
 
@@ -115,10 +103,4 @@
 // vespasianus.publish();
 // mucianus.list; // [{ target: Vespasianus, point: 1 }]
 //  -->
-
-
-
-
-</script>
-
-</html>
+```
