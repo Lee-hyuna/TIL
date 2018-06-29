@@ -366,7 +366,3 @@ Function.prototype // 함수의 프로토타입 객체가 가지고 있는 함�
 > - forEach(), map
 
 ---
-
-> #### 참고문헌 
-> **[Yamoo9/JS-AntiPattern](https://github.com/yamoo9/FDS/blob/3rd_FDS/REFERENCES/JavaScript/02%20Advanced/js-03-anti-pattern.md#javascript-%EC%95%88%ED%8B%B0-%ED%8C%A8%ED%84%B4%EC%9D%84-%EB%B3%B4%EC%99%84%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)** | 야무쌤 GitHub 레퍼런스  
-> **[Yamoo9/JS-Contructor](https://github.com/yamoo9/FDS/blob/3rd_FDS/REFERENCES/JavaScript/02%20Advanced/js-04-constructor.md#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%A0%95%EC%9D%98-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98user-define-constructor-function)** | 야무쌤 GitHub 레퍼런스 - 생성자와 리터럴
