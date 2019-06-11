@@ -18,7 +18,7 @@ LIFO (Last in First Out)
 
 스택은 가장 윗부분에서만 자료를 추가와 삭제가 일어나므로 실행속도가 빠르고 구현이 쉬운 효율적인 자료구조
 
-![](./images/image01.png)
+![](../Javascript/images/image01.png)
 
 ```js
 var third = function() {
@@ -177,7 +177,7 @@ FIFO (First in First Out)
 주로 tree 의 깊이 우선탐색, 프린트 스풀러, 은행 고객이나 식료품상점의 대기줄 등 주로 순서 처리의 시스템에 쓰인다.
 
 
-![](./images/image03.png)
+![](../Javascript/images/image03.png)
 
 
 ```js
