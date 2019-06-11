@@ -1,0 +1,60 @@
+{
+  "name": "atm-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --mode=development",
+    "dev-build": "webpack --mode=none",
+    "build": "webpack --mode=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-manifest-plugin": "^2.0.4"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "node-sass": "^4.9.4",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1"
+  },
+  "prettier": {
+    "printWidth": 150,
+    "semi": false,
+    "tabWidth": 2,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "tabs": true,
+    "[javascript]": {
+      "editor.formatOnSave": true
+    }
+  }
+}
