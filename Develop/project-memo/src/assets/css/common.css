@@ -1,0 +1,19 @@
+/* reset */
+article, aside, footer, header, hgroup, main, nav, section{display:block}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+input::-ms-clear{display:none}
+button{border:0 none;background-color:transparent;cursor:pointer}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:Helvetica,Arial,'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;color:#555;word-break:break-all}
+a{color:#111;text-decoration:none;cursor:pointer}
+a:active, a:hover{text-decoration:underline}
+a:active{background-color:transparent}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+img{vertical-align:top}
+strong, b, th, h1, h2, h3, h4, h5, h6{font-weight:600}
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner{padding:0;border:0}

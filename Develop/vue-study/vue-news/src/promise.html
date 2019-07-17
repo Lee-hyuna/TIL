@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <div>jquery ajax, promise</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      /**
+       * Promise 객체가 call
+       * 
+       */
+      function callAjax() {
+        new Promise((resolve, reject)=> {
+          $.ajax({
+            url: 'http://api.hnpwa.com/v0/news/1.json',
+            success: data => {
+              resolve(data)
+            }
+          })
+        })
+      }
+
+      function fetchData() {
+        // 1
+        var result = []
+
+        // 2
+        /**
+         * Promise 반환
+         * 코드가 직관적으로 변하게 됨.
+         */
+        callAjax()
+          .then(data => {
+            //     result = data
+            //     console.log('함수 결과', result)
+          })
+
+        /**
+         * ajax call
+         */
+        // $.ajax({
+        //   url: 'http://api.hnpwa.com/v0/news/1.json',
+        //   success: data => {
+        //     console.log('데이터 호출 결과', data)
+        //     result = data
+        //     console.log('함수 결과', result)
+        //   }
+        // })
+      }
+    </script>
+  </body>
+</html>
