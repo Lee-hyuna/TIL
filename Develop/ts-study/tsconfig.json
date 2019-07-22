@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es5", // 빌드된 자바스크립트 버전
+    "module": "esnext",
+    "strict": true, // 엄격모드
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": [
+      "webpack-env"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  // 해당 파일을 자바스크립트 파일을 빌드함
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  // 빌드를 예외할 파일
+  "exclude": [
+    "node_modules"
+  ]
+}
