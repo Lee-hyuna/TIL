@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fe1baf0-ac84-4289-bf7d-0b7c4605f425" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Develop/ts-study/study/step1.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ONE-BY-ONE/trainingJS-55.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ONE-BY-ONE/trainingJS-56.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ONE-BY-ONE/trainingJS-57.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Develop/vue-study/vue-news/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Develop/vue-study/vue-news/src/App.vue" afterDir="false" />
-    </list>
+    <list default="true" id="3fe1baf0-ac84-4289-bf7d-0b7c4605f425" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/Develop/express-server/node_modules/" />
     <ignored path="$PROJECT_DIR$/Develop/project-memo/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -132,18 +124,17 @@
       <workItem from="1562657087001" duration="157000" />
       <workItem from="1563781003189" duration="158000" />
       <workItem from="1563781217958" duration="163000" />
-      <workItem from="1563781397141" duration="2724000" />
+      <workItem from="1563781397141" duration="2728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7200000" />
+    <option name="totallyTimeSpent" value="7204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1369" y="-1354" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15850447" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15850447" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" />
