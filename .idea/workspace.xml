@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fe1baf0-ac84-4289-bf7d-0b7c4605f425" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Reference/Javascript/Vue/vue 동작 원리 이해하기" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reference/AWS/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Reference/AWS/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +21,12 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dO5Hhf0hSxBTWTgOaAoT3kmaMO" />
@@ -83,7 +89,23 @@
       <workItem from="1563781217958" duration="163000" />
       <workItem from="1563781397141" duration="2728000" />
       <workItem from="1592283213576" duration="658000" />
+      <workItem from="1609920846474" duration="196000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1609920865844</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609920865844</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test">
+      <created>1609921001928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609921001928</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,10 +116,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Develop/project-memo" />
+      <path value="$PROJECT_DIR$/Develop/uploader" />
+      <path value="$PROJECT_DIR$/Develop/vue-study/vue-news" />
+    </ignored-roots>
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
