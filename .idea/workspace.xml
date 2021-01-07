@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fe1baf0-ac84-4289-bf7d-0b7c4605f425" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Reference/AWS/EC2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reference/AWS/지역/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reference/AWS/기초지식/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Reference/AWS/기초지식/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reference/AWS/EC2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Reference/AWS/EC2/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +90,7 @@
       <workItem from="1563781217958" duration="163000" />
       <workItem from="1563781397141" duration="2728000" />
       <workItem from="1592283213576" duration="658000" />
-      <workItem from="1609920846474" duration="6701000" />
+      <workItem from="1609920846474" duration="9988000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1609920865844</created>
@@ -122,7 +120,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609997631061</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="aws 기초지식">
+      <created>1610000824914</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610000824914</updated>
+    </task>
+    <task id="LOCAL-00006" summary="aws">
+      <created>1610000899851</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610000899851</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +162,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="테스트" />
     <MESSAGE value="aws 기초지식" />
-    <option name="LAST_COMMIT_MESSAGE" value="aws 기초지식" />
+    <MESSAGE value="aws" />
+    <option name="LAST_COMMIT_MESSAGE" value="aws" />
   </component>
 </project>
