@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fe1baf0-ac84-4289-bf7d-0b7c4605f425" name="Default Changelist" comment="">
+    <list default="true" id="3fe1baf0-ac84-4289-bf7d-0b7c4605f425" name="Default Changelist" comment="*테스트">
+      <change afterPath="$PROJECT_DIR$/Reference/AWS/기초지식/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reference/AWS/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Reference/AWS/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +89,7 @@
       <workItem from="1563781217958" duration="163000" />
       <workItem from="1563781397141" duration="2728000" />
       <workItem from="1592283213576" duration="658000" />
-      <workItem from="1609920846474" duration="196000" />
+      <workItem from="1609920846474" duration="4126000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1609920865844</created>
@@ -105,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609921001928</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="테스트">
+      <created>1609921065192</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609921065192</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +138,7 @@
       <path value="$PROJECT_DIR$/Develop/vue-study/vue-news" />
     </ignored-roots>
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="테스트" />
+    <option name="LAST_COMMIT_MESSAGE" value="테스트" />
   </component>
 </project>
